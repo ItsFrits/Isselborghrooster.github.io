@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Schooljaar 2023-2024</title>
+    <style>
+        .container {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+        }
+        
+        .row {
+          display: flex;
+          gap: 25px; /* Adjust the gap between sets of grids */
+          margin-bottom: 25px;
+        }
+
+        .schedule {
+          display: grid;
+          grid-template-columns: 50px 50px 50px 50px 50px; /* Columns width */
+          gap: 5px; /* Squares gap */
+        }
+
+        .day {
+          width: 50px; /* Square width */
+          height: 50px; /* Square height */
+          background-color: rgb(125, 255, 125);
+        }
+
+        .short-day {
+          height: 250px; /* Short day height (5*50) */
+        }
+
+        .holiday {
+          background-color: rgb(175, 200, 255);
+        }
+
+        .passed {
+          background-color: rgb(255, 0, 0);
+        }
+
+        .exams {
+          background-color: rgb(255, 255, 100);
+        }
+
+        .legend {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 50px;
+        }
+
+        .legend-item {
+          display: flex;
+          align-items: center;
+        }
+
+        .legend-text {
+          font-size: 50px;
+          margin-top: -5px;
+          font-family: Verdana;
+        }
+
+        .legend-day {
+          width: 50px;
+          height: 50px;
+          margin-right: 10px;
+        }
+
+        .legend-normal .legend-day {
+          background-color: rgb(125, 255, 125);
+        }
+
+        .legend-exams .legend-day {
+          background-color: rgb(255, 255, 100);
+        }
+
+        .legend-holiday .legend-day {
+          background-color: rgb(175, 200, 255);
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="schedule">
+            <div class="day" style="height: 400px;" data-date="2023-08-21"></div>
+            <div class="day" style="height: 400px;" data-date="2023-08-22"></div>
+            <div class="day short-day" data-date="2023-08-23"></div>
+            <div class="day" style="height: 400px;" data-date="2023-08-24"></div>
+            <div class="day short-day" data-date="2023-08-25"></div>
+        </div>
+        
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2023-08-28"></div>
+          <div class="day" style="height: 400px;" data-date="2023-08-29"></div>
+          <div class="day short-day" data-date="2023-08-30"></div>
+          <div class="day" style="height: 400px;" data-date="2023-08-31"></div>
+          <div class="day short-day" data-date="2023-09-01"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2023-09-04"></div>
+          <div class="day" style="height: 400px;" data-date="2023-09-05"></div>
+          <div class="day short-day" data-date="2023-09-06"></div>
+          <div class="day" style="height: 400px;" data-date="2023-09-07"></div>
+          <div class="day short-day" data-date="2023-09-08"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2023-09-11"></div>
+          <div class="day" style="height: 400px;" data-date="2023-09-12"></div>
+          <div class="day short-day" data-date="2023-09-13"></div>
+          <div class="day" style="height: 400px;" data-date="2023-09-14"></div>
+          <div class="day short-day" data-date="2023-09-15"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2023-09-18"></div>
+          <div class="day" style="height: 400px;" data-date="2023-09-19"></div>
+          <div class="day short-day" data-date="2023-09-20"></div>
+          <div class="day" style="height: 400px;" data-date="2023-09-21"></div>
+          <div class="day short-day" data-date="2023-09-22"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2023-09-25"></div>
+          <div class="day" style="height: 400px;" data-date="2023-09-26"></div>
+          <div class="day short-day" data-date="2023-09-27"></div>
+          <div class="day" style="height: 400px;" data-date="2023-09-28"></div>
+          <div class="day short-day" data-date="2023-09-29"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2023-10-02"></div>
+          <div class="day" style="height: 400px;" data-date="2023-10-03"></div>
+          <div class="day short-day" data-date="2023-10-04"></div>
+          <div class="day" style="height: 400px;" data-date="2023-10-05"></div>
+          <div class="day short-day" data-date="2023-10-06"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 34-40^ -->
+    <div class="container">
+      <div class="row">
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2023-10-09"></div>
+          <div class="day" style="height: 400px;" data-date="2023-10-10"></div>
+          <div class="day short-day" data-date="2023-10-11"></div>
+          <div class="day" style="height: 400px;" data-date="2023-10-12"></div>
+          <div class="day short-day" data-date="2023-10-13"></div>
+        </div>
+        
+        <div class="schedule">
+          <div class="day holiday" style="height: 400px;" data-date="2023-10-16"></div>
+          <div class="day holiday" style="height: 400px;" data-date="2023-10-17"></div>
+          <div class="day short-day holiday" data-date="2023-10-18"></div>
+          <div class="day holiday" style="height: 400px;" data-date="2023-10-19"></div>
+          <div class="day short-day holiday" data-date="2023-10-20"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2023-10-23"></div>
+          <div class="day" style="height: 400px;" data-date="2023-10-24"></div>
+          <div class="day short-day" data-date="2023-10-25"></div>
+          <div class="day" style="height: 400px;" data-date="2023-10-26"></div>
+          <div class="day short-day" data-date="2023-10-27"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2023-10-30"></div>
+          <div class="day" style="height: 400px;" data-date="2023-10-31"></div>
+          <div class="day short-day" data-date="2023-11-01"></div>
+          <div class="day" style="height: 400px;" data-date="2023-11-02"></div>
+          <div class="day short-day" data-date="2023-11-03"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2023-11-06"></div>
+          <div class="day" style="height: 400px;" data-date="2023-11-07"></div>
+          <div class="day short-day" data-date="2023-11-08"></div>
+          <div class="day" style="height: 400px;" data-date="2023-11-09"></div>
+          <div class="day short-day" data-date="2023-11-10"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2023-11-13"></div>
+          <div class="day" style="height: 400px;" data-date="2023-11-14"></div>
+          <div class="day short-day" data-date="2023-11-15"></div>
+          <div class="day" style="height: 400px;" data-date="2023-11-16"></div>
+          <div class="day short-day" data-date="2023-11-17"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2023-11-20"></div>
+          <div class="day" style="height: 400px;" data-date="2023-11-21"></div>
+          <div class="day short-day" data-date="2023-11-22"></div>
+          <div class="day" style="height: 400px;" data-date="2023-11-23"></div>
+          <div class="day short-day" data-date="2023-11-24"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 41-47^ -->
+    <div class="container">
+      <div class="row">
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2023-11-27"></div>
+          <div class="day" style="height: 400px;" data-date="2023-11-28"></div>
+          <div class="day short-day" data-date="2023-11-29"></div>
+          <div class="day" style="height: 400px;" data-date="2023-11-30"></div>
+          <div class="day short-day" data-date="2023-12-01"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2023-12-04"></div>
+          <div class="day" style="height: 400px;" data-date="2023-12-05"></div>
+          <div class="day short-day" data-date="2023-12-06"></div>
+          <div class="day" style="height: 400px;" data-date="2023-12-07"></div>
+          <div class="day short-day" data-date="2023-12-08"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2023-12-11"></div>
+          <div class="day" style="height: 400px;" data-date="2023-12-12"></div>
+          <div class="day short-day" data-date="2023-12-13"></div>
+          <div class="day" style="height: 400px;" data-date="2023-12-14"></div>
+          <div class="day short-day" data-date="2023-12-15"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2023-12-18"></div>
+          <div class="day" style="height: 400px;" data-date="2023-12-19"></div>
+          <div class="day short-day" data-date="2023-12-20"></div>
+          <div class="day short-day" data-date="2023-12-21"></div>
+          <div class="day short-day holiday" data-date="2023-12-22"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day holiday" style="height: 400px;" data-date="2023-12-25"></div>
+          <div class="day holiday" style="height: 400px;" data-date="2023-12-26"></div>
+          <div class="day short-day holiday" data-date="2023-12-27"></div>
+          <div class="day holiday" style="height: 400px;" data-date="2023-12-28"></div>
+          <div class="day short-day holiday" data-date="2023-12-29"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day holiday" style="height: 400px;" data-date="2024-01-01"></div>
+          <div class="day holiday" style="height: 400px;" data-date="2024-01-02"></div>
+          <div class="day short-day holiday" data-date="2024-01-03"></div>
+          <div class="day holiday" style="height: 400px;" data-date="2024-01-04"></div>
+          <div class="day short-day holiday" data-date="2024-01-05"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2024-01-08"></div>
+          <div class="day" style="height: 400px;" data-date="2024-01-09"></div>
+          <div class="day short-day" data-date="2024-01-10"></div>
+          <div class="day" style="height: 400px;" data-date="2024-01-11"></div>
+          <div class="day short-day" data-date="2024-01-12"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 48-2^ -->
+    <div class="container">
+      <div class="row">
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2024-01-15"></div>
+          <div class="day" style="height: 400px;" data-date="2024-01-16"></div>
+          <div class="day short-day" data-date="2024-01-17"></div>
+          <div class="day" style="height: 400px;" data-date="2024-01-18"></div>
+          <div class="day short-day" data-date="2024-01-19"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2024-01-22"></div>
+          <div class="day" style="height: 400px;" data-date="2024-01-23"></div>
+          <div class="day short-day" data-date="2024-01-24"></div>
+          <div class="day" style="height: 400px;" data-date="2024-01-25"></div>
+          <div class="day short-day" data-date="2024-01-26"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2024-01-29"></div>
+          <div class="day" style="height: 400px;" data-date="2024-01-30"></div>
+          <div class="day short-day" data-date="2024-01-31"></div>
+          <div class="day" style="height: 400px;" data-date="2024-02-01"></div>
+          <div class="day short-day" data-date="2024-02-02"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2024-02-05"></div>
+          <div class="day" style="height: 400px;" data-date="2024-02-06"></div>
+          <div class="day short-day" data-date="2024-02-07"></div>
+          <div class="day" style="height: 400px;" data-date="2024-02-08"></div>
+          <div class="day short-day" data-date="2024-02-09"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day holiday" style="height: 400px;" data-date="2024-02-12"></div>
+          <div class="day holiday" style="height: 400px;" data-date="2024-02-13"></div>
+          <div class="day short-day holiday" data-date="2024-02-14"></div>
+          <div class="day holiday" style="height: 400px;" data-date="2024-02-15"></div>
+          <div class="day short-day holiday" data-date="2024-02-16"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2024-02-19"></div>
+          <div class="day" style="height: 400px;" data-date="2024-02-20"></div>
+          <div class="day short-day" data-date="2024-02-21"></div>
+          <div class="day" style="height: 400px;" data-date="2024-02-22"></div>
+          <div class="day short-day" data-date="2024-02-23"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2024-02-26"></div>
+          <div class="day" style="height: 400px;" data-date="2024-02-27"></div>
+          <div class="day short-day" data-date="2024-02-28"></div>
+          <div class="day" style="height: 400px;" data-date="2024-02-29"></div>
+          <div class="day short-day" data-date="2024-03-01"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 3-9^ -->
+    <div class="container">
+      <div class="row">
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2024-03-04"></div>
+          <div class="day" style="height: 400px;" data-date="2024-03-05"></div>
+          <div class="day short-day" data-date="2024-03-06"></div>
+          <div class="day" style="height: 400px;" data-date="2024-03-07"></div>
+          <div class="day short-day" data-date="2024-03-08"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2024-03-11"></div>
+          <div class="day" style="height: 400px;" data-date="2024-03-12"></div>
+          <div class="day short-day" data-date="2024-03-13"></div>
+          <div class="day" style="height: 400px;" data-date="2024-03-14"></div>
+          <div class="day short-day" data-date="2024-03-15"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2024-03-18"></div>
+          <div class="day" style="height: 400px;" data-date="2024-03-19"></div>
+          <div class="day short-day" data-date="2024-03-20"></div>
+          <div class="day" style="height: 400px;" data-date="2024-03-21"></div>
+          <div class="day short-day" data-date="2024-03-22"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2024-03-25"></div>
+          <div class="day" style="height: 400px;" data-date="2024-03-26"></div>
+          <div class="day short-day" data-date="2024-03-27"></div>
+          <div class="day" style="height: 400px;" data-date="2024-03-28"></div>
+          <div class="day short-day holiday" data-date="2024-03-29"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day holiday" style="height: 400px;" data-date="2024-04-01"></div>
+          <div class="day" style="height: 400px;" data-date="2024-04-02"></div>
+          <div class="day short-day" data-date="2024-04-03"></div>
+          <div class="day" style="height: 400px;" data-date="2024-04-04"></div>
+          <div class="day short-day" data-date="2024-04-05"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2024-04-08"></div>
+          <div class="day" style="height: 400px;" data-date="2024-04-09"></div>
+          <div class="day short-day" data-date="2024-04-10"></div>
+          <div class="day" style="height: 400px;" data-date="2024-04-11"></div>
+          <div class="day short-day" data-date="2024-04-12"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day" style="height: 400px;" data-date="2024-04-15"></div>
+          <div class="day" style="height: 400px;" data-date="2024-04-16"></div>
+          <div class="day short-day" data-date="2024-04-17"></div>
+          <div class="day" style="height: 400px;" data-date="2024-04-18"></div>
+          <div class="day short-day" data-date="2024-04-19"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 10-16^ -->
+    <div class="container">
+      <div class="row">
+        <div class="schedule">
+          <div class="day holiday" style="height: 400px;" data-date="2024-04-22"></div>
+          <div class="day holiday" style="height: 400px;" data-date="2024-04-23"></div>
+          <div class="day short-day holiday" data-date="2024-04-24"></div>
+          <div class="day holiday" style="height: 400px;" data-date="2024-04-25"></div>
+          <div class="day short-day holiday" data-date="2024-04-26"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day holiday" style="height: 400px;" data-date="2024-04-29"></div>
+          <div class="day holiday" style="height: 400px;" data-date="2024-04-30"></div>
+          <div class="day short-day holiday" data-date="2024-05-01"></div>
+          <div class="day holiday" style="height: 400px;" data-date="2024-05-02"></div>
+          <div class="day short-day holiday" data-date="2024-05-03"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day exams" style="height: 400px;" data-date="2024-05-06"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-05-07"></div>
+          <div class="day short-day exams" data-date="2024-05-08"></div>
+          <div class="day holiday" style="height: 400px;" data-date="2024-05-09"></div>
+          <div class="day short-day holiday" data-date="2024-05-10"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day exams" style="height: 400px;" data-date="2024-05-13"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-05-14"></div>
+          <div class="day short-day exams" data-date="2024-05-15"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-05-16"></div>
+          <div class="day short-day exams" data-date="2024-05-17"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day holiday" style="height: 400px;" data-date="2024-05-20"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-05-21"></div>
+          <div class="day short-day exams" data-date="2024-05-22"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-05-23"></div>
+          <div class="day short-day exams" data-date="2024-05-24"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day exams" style="height: 400px;" data-date="2024-05-27"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-05-28"></div>
+          <div class="day short-day exams" data-date="2024-05-29"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-05-30"></div>
+          <div class="day short-day exams" data-date="2024-05-31"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day exams" style="height: 400px;" data-date="2024-06-03"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-06-04"></div>
+          <div class="day short-day exams" data-date="2024-06-05"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-06-06"></div>
+          <div class="day short-day exams" data-date="2024-06-07"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 17-23^ -->
+    <div class="container">
+      <div class="row">
+        <div class="schedule">
+          <div class="day exams" style="height: 400px;" data-date="2024-06-10"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-06-11"></div>
+          <div class="day short-day exams" data-date="2024-06-12"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-06-13"></div>
+          <div class="day short-day exams" data-date="2024-06-14"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day exams" style="height: 400px;" data-date="2024-06-17"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-06-18"></div>
+          <div class="day short-day exams" data-date="2024-06-19"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-06-20"></div>
+          <div class="day short-day exams" data-date="2024-06-21"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day exams" style="height: 400px;" data-date="2024-06-24"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-06-25"></div>
+          <div class="day short-day exams" data-date="2024-06-26"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-06-27"></div>
+          <div class="day short-day exams" data-date="2024-06-28"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day exams" style="height: 400px;" data-date="2024-07-01"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-07-02"></div>
+          <div class="day short-day exams" data-date="2024-07-03"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-07-04"></div>
+          <div class="day short-day exams" data-date="2024-07-05"></div>
+        </div>
+  
+        <div class="schedule">
+          <div class="day exams" style="height: 400px;" data-date="2024-07-08"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-07-09"></div>
+          <div class="day short-day exams" data-date="2024-07-10"></div>
+          <div class="day exams" style="height: 400px;" data-date="2024-07-11"></div>
+          <div class="day short-day exams" data-date="2024-07-12"></div>
+        </div>
+
+        <div class="schedule">
+          <div class="day holiday" style="height: 400px;" data-date="2024-07-15"></div>
+          <div class="day holiday" style="height: 400px;" data-date="2024-07-16"></div>
+          <div class="day short-day holiday" data-date="2024-07-17"></div>
+          <div class="day holiday" style="height: 400px;" data-date="2024-07-18"></div>
+          <div class="day short-day holiday" data-date="2024-07-19"></div>
+        </div>
+
+        <div class="schedule">
+          <div class="day holiday" style="height: 400px;" data-date="2024-07-22"></div>
+          <div class="day holiday" style="height: 400px;" data-date="2024-07-23"></div>
+          <div class="day short-day holiday" data-date="2024-07-24"></div>
+          <div class="day holiday" style="height: 400px;" data-date="2024-07-25"></div>
+          <div class="day short-day holiday" data-date="2024-07-26"></div>
+        </div>
+      </div>
+      <!-- 24-28^ -->
+      <div class="legend">
+        <div class="legend-item legend-normal">
+            <div class="legend-day"></div> 
+            <span class="legend-text">Normaal</span>
+        </div>
+
+        <div class="legend-item legend-exams">
+            <div class="legend-day exams"></div> 
+            <span class="legend-text">Examens</span>
+        </div>
+
+        <div class="legend-item legend-holiday">
+            <div class="legend-day holiday"></div> 
+            <span class="legend-text">Vrij</span>
+        </div>
+    </div>
+      <!-- legend -->
+    </div>
+      
+    <script>
+      const now = new Date();
+      const targetSchedules = document.querySelectorAll(".schedule");
+
+      targetSchedules.forEach(schedule => {
+          const days = schedule.children;
+          for (let i = 0; i < days.length; i++) {
+            const dayElement = days[i];
+            const dayDate = new Date(dayElement.getAttribute("data-date"));
+
+            let cutoffTime;
+
+            // Adjust cutoff time for long and short days
+            if (dayElement.classList.contains('short-day')) {
+                cutoffTime = new Date(dayDate.getFullYear(), dayDate.getMonth(), dayDate.getDate(), 12, 30, 0);
+            } else {
+                cutoffTime = new Date(dayDate.getFullYear(), dayDate.getMonth(), dayDate.getDate(), 15, 5, 0);
+            }
+
+            if (now > dayDate && now > cutoffTime) {
+                dayElement.classList.add("passed");
+            }
+          }
+        });
+    </script>
+  </body>
+</html>
